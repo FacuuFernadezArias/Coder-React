@@ -1,0 +1,17 @@
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container {
+    background-image: url("https://images.alphacoders.com/510/510026.jpg");
+    background-size: cover; 
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
