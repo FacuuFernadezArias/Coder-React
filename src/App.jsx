@@ -1,14 +1,24 @@
-import './App.css'
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import "./App.css";
+import NavBar from "./components/Navbar";
+import { Route, Routes} from "react-router-dom";
+import Contact from "./pages/Contact";
+import Home from './pages/Home';
+import Store from './pages/store';
+import Details from "./pages/Details";
+
 
 function App() {
   return (
-    <div>
-    <NavBar/>
-    <ItemListContainer greeting ="Bienvenido a Familia Futbol"/>
+    <div className="Container">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/store" element={<Store/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
