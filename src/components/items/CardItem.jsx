@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 
 const CardItem = ({ item }) => {
     return (
-        <Card style={{ width: '20rem' }}className='mx-3 mt-5' >
-            <Card.Img variant="top" src={item.image}  style={{ height: '40%' }} />
+        <Card style={{ marginBottom:"40px"  ,width: '18rem' }}className=' mx-2 mt-4 ' >
+            <Card.Img variant="top" src={item.image}  style={{ height: '30%' }} />
             <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
+                <Card.Title>{item.name}</Card.Title>
                 <Card.Text>
-                    {item.description}
+                   Description: {item.description}
+                </Card.Text>
+                <Card.Text>
+                   Precio: {item.price} USD
                 </Card.Text>
                 <Link to={`/details/${item.id}`}>
                     <Button variant="dark">Ver detalles</Button>
@@ -21,4 +24,3 @@ const CardItem = ({ item }) => {
 }
 
 export default CardItem
-

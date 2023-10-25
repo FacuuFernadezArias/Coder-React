@@ -1,9 +1,13 @@
 import React from "react"
+import Form from "../components/Hooks/Forms"
+import Advertisings from "../components/items/Advertisings"
+
 
 const Contact = () => {
     return(
-        <div>
-
+        <div>  
+             <Advertisings/>
+            <Form/>
         </div>
     )
 }

@@ -1,15 +1,18 @@
 import React from "react";
-import ItemListContainer from "../components/items/ItemListContainer";
-import ItemDetailContainer from "../components/Details/ItemDetailContainer";
-import { Router, Routes } from "react-router-dom";
-import Details from "./Details";
+import ItemListContainer from "../components/Items/ItemListContainer";
+// import ItemDetailContainer from "../components/Details/ItemDetailContainer";
+import Advertisings from "../components/items/Advertisings"
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 
 const Store = () => {
+
+
   return (
     <div>
-     <ItemListContainer/>
-      <ItemDetailContainer/>
+      <Advertisings/>
+        <ItemListContainer/>
+      {/* <ItemDetailContainer/> */}
     </div>
   );
 };
